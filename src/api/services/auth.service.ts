@@ -34,6 +34,14 @@ class AuthService {
 
     return isValid ? user : null;
   }
+
+  async getUser(id: number) {
+    const userData = await sql`
+      SELECT * FROM users WHERE id=${id}
+    `;
+
+    return userData;
+  }
 }
 
 export default new AuthService();

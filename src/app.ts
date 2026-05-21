@@ -5,10 +5,12 @@ import express, {
 } from "express";
 import GlobalErrorHandler from "./middlewares/GlobalErrorHandler";
 import authRouter from "./api/routes/auth.route";
+import cookieParser from "cookie-parser";
 
 const app: Application = express();
 
 app.use(express.json());
+app.use(cookieParser());
 app.use("/api/auth", authRouter);
 
 app.get("/", (req: Request, res: Response) => {
