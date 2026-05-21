@@ -14,3 +14,15 @@ export type User = {
 };
 
 export type RUser = Omit<User, "id" | "password" | "created_at" | "updated_at">;
+
+export type Order = {
+  id: number;
+  customer_id: number;
+  quantity: number;
+  food: string;
+  price: number;
+  created_at: Date;
+  updated_at: Date;
+};
+
+export type NewOrder = Omit<Order, "id" | "created_at" | "updated_at">;
