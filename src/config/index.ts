@@ -1,6 +1,5 @@
-import { env } from "process";
-
 import dotenv from "dotenv";
+import { env } from "process";
 
 dotenv.config({ quiet: true });
 
