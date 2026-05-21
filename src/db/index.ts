@@ -17,8 +17,8 @@ export const initDB = async () => {
             age INIT NOT NULL
             role VARCHAR(20)
 
-            createdAt TIMESTAMP DEFAULT NOW(),
-            updatedAt TIMESTAMP DEFAULT NOW()
+            created_at TIMESTAMP DEFAULT NOW(),
+            updated_at TIMESTAMP DEFAULT NOW()
         )
     `;
 
@@ -32,8 +32,8 @@ export const initDB = async () => {
             age INIT NOT NULL
             price NUMERIC(10, 2) NOT NULL,
 
-            createdAt TIMESTAMP DEFAULT NOW(),
-            updatedAt TIMESTAMP DEFAULT NOW()
+            created_at TIMESTAMP DEFAULT NOW(),
+            updated_at TIMESTAMP DEFAULT NOW()
         )
     `;
 
